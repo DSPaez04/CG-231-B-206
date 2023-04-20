@@ -24,7 +24,7 @@ light.position.set(-1, 2, 4);
 scene.add(light);
 
 // creo el color a utilizar
-const color = new THREE.Color("rgb(203, 209, 188)");
+const color = new THREE.Color("rgb(52, 167, 217)");
 //Parametrizacion Global
 var R = 1;
 var Sx = 0.5;
@@ -34,7 +34,7 @@ var Rx = 0;
 var Ry = Math.PI/2;
 var Rz = Math.PI/4;
 //creacion de la esfera
-const geom = new THREE.SphereGeometry( R, 10, 10 );
+const geom = new THREE.SphereGeometry( R, 6, 8 );
 const mate = new THREE.MeshPhongMaterial( { color} );
 const bola = new THREE.Mesh( geom, mate );
 scene.add( bola );
@@ -44,7 +44,6 @@ geom.scale(Sx,Sy,Sz);  // se escala la esfera para verla acostada
 geom.rotateY(Ry);   // se rota 120 grados para que quede sobre el eje x 
 geom.translate(R*3,0,0);
 geom.rotateZ(Rz)
-//geom.applyMatrix(Escalado(Sx,Sy,Sz));
 
 const size = 150;
 const divisions = 160;
